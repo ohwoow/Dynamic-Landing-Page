@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gayathri', sans-serif;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  
+}
+
+.modal.hide {
+  animation: removeModal .7s forwards ease-in-out;
+}
+
+.modal-overlay {
+  background-color: #64C7FF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  display: flex;
+  flex: 0 0 400px;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.input-name {
+  padding: 15px;
+  padding-bottom: 5px;
+
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-bottom: 15px;
+
+  font-family: inherit;
+  font-size: 24px;
+
+  outline: none;
+}
+
+.btn {
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #fff;
+  background-color: #004156;
+  border: none;
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.time {
+  font-size: 84px;
+  min-width: 500px;
+  text-align: center;
+}
+
+.title {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 31px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.focus {
+  position: relative;
+  font-size: 26px;
+  outline: none;
+  min-width: 120px;
+  text-align: center;
+}
+
+.focus::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: #fff;
+}
+
+@keyframes removeModal {
+  100% {
+    transform: translateY(1000px);
+    z-index: -1000;
+  }
+}
+
+
+@media(max-width: 767px) {
+  .time {
+    font-size: 64px;
+  }
+  
+  .title {
+    font-size: 44px;
+  }
+  
+  .subtitle {
+    font-size: 26px;
+  }
+}
